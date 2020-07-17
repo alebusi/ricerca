@@ -99,8 +99,10 @@ function generateVariables (){
 }
 
 // eseguo le funzioni una volta per inizializzare la pagina (aggiornando le variabili)
-generateVariables ();
-drawCanvas(mouseX ,mouseY);
+set_interval(function() { 
+    generateVariables ();
+    drawCanvas(mouseX ,mouseY);
+}, 3000);
 
 
 
